@@ -1,12 +1,18 @@
 # rsamcounts
 The goal of this program is to report read counts for various genomic features (genes, transcripts, exons and junctions) 
-and summary QC stats/metrics, through a single pass through a RNA-Seq alignment file (SAM/BAM/CRAM)
+and summary QC stats/metrics, in a single pass through a RNA-Seq alignment file (SAM/BAM/CRAM)
 
-Currently, programs like featureCounts (subRead) and regtools require multiple passes in order to generate such count and QC data, 
+Currently, multiple programs and multiple passes through a BAM/CRAM file seem to be in order to generate such count data, 
 while this program aims to provide all these data in a single pass. 
 
-An annotation file (GFF/GTF) must be provided (Gencode annotation is recommended), and the alignment file must be sorted by coordinate (`samtools sort`).
+## Requirements
+The program expects these inputs:
+* an alignment file (BAM/CRAM format), sorted by coordinate (`samtools sort`)
+* an annotation file (GFF/GTF) (Gencode annotation file is recommended) 
+* (optional) the genome fasta file with the genomic sequence of the alignments might be needed for some features,
+especially when the input is in CRAM format
 
+## Output
 The program outputs multiple tab delimited files (compressed):
  * _outprefix_.gene.tab
  * _outprefix_.exon.tab
