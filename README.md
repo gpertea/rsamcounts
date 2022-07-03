@@ -8,7 +8,7 @@ while this program aims to provide all these data in a single pass.
 ## Requirements
 The program expects these inputs:
 * an alignment file (BAM/CRAM format), sorted by coordinate (`samtools sort`)
-* an annotation file (GFF/GTF) (Gencode annotation file is recommended) 
+* an annotation file (GFF/GTF, a recent Gencode annotation is recommended)
 * (optional) the genome fasta file with the genomic sequence for the reference that was used for aligning the reads; this might be needed for some of the program functionality, especially when the input is in CRAM format
 
 ## Output
