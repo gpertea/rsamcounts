@@ -1,4 +1,4 @@
-# rsamcounts
+# samcounts
 The goal of this program is to report read counts for various genomic features (genes, transcripts, exons and junctions) 
 and summary QC stats/metrics, in a single pass through a RNA-Seq alignment file (SAM/BAM/CRAM)
 
@@ -19,6 +19,6 @@ The program outputs multiple tab delimited files (compressed):
  * _outprefix_.jx.tab
  * _outprefix_.qc_stats.tab
  
-_outprefix_ is the output file name prefix, default `RSAMC`, which can be provided by the user with `--prefix/-l` option.
+_outprefix_ is the output file name prefix, default `samcounts`, which can be provided by the user with `--prefix/-l` option.
 
 
